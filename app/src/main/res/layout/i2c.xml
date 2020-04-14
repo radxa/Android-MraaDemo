@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/i2c_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please select the Bus and Device Address:"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+        />
+
+    <TextView
+            android:id="@+id/i2c_text_bus_Tips"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Bus: "
+            android:layout_below="@+id/i2c_text1"
+            android:layout_alignLeft="@+id/i2c_text1"
+            android:layout_marginTop="30dp"
+        />
+
+    <Spinner
+            android:id="@+id/i2c_spinner_bus"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/i2c_bus"
+            android:layout_toRightOf="@+id/i2c_text_bus_Tips"
+            android:layout_alignBottom="@+id/i2c_text_bus_Tips"
+        />
+
+
+    <TextView
+        android:id="@+id/i2c_text_device_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/i2c_text_bus_Tips"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/i2c_spinner_bus"
+        android:text="DevAddr: " />
+
+    <Spinner
+            android:id="@+id/i2c_spinner_devaddr"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/i2c_text_device_address"
+            android:layout_alignBottom="@+id/i2c_text_device_address"
+        />
+
+
+
+    <Button
+            android:id="@+id/i2c_button_select_deviceandbus_confirm"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Confirm"
+            android:layout_toRightOf="@+id/i2c_spinner_devaddr"
+            android:layout_alignBottom="@+id/i2c_spinner_devaddr"
+            android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+            android:id="@+id/i2c_select_readwrite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please select the operation you want："
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:visibility="gone"
+        />
+
+    <Button
+            android:id="@+id/i2c_button_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Read"
+            android:layout_below="@+id/i2c_text1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="80dp"
+            android:visibility="gone"
+        />
+
+    <Button
+            android:id="@+id/i2c_button_write"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Write"
+            android:layout_below="@+id/i2c_text1"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="200dp"
+            android:layout_marginTop="80dp"
+            android:visibility="gone"
+        />
+
+    <TextView
+            android:id="@+id/i2c_text_read"
+            android:layout_below="@+id/i2c_button_read"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Please enter the address to read:"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone"
+        />
+
+    <EditText
+            android:id="@+id/i2c_edit_read_reg_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="eg: 0x01"
+            android:layout_below="@+id/i2c_text_read"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="150dp"
+            android:visibility="gone"
+        />
+
+    <Button
+            android:id="@+id/i2c_button_read_confirm"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Confirm"
+            android:layout_toRightOf="@+id/i2c_edit_read_reg_address"
+            android:layout_alignBottom="@+id/i2c_edit_read_reg_address"
+            android:visibility="gone"
+        />
+
+    <TextView
+            android:id="@+id/i2c_text_readvalue_Tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Read out value:"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/i2c_edit_read_reg_address"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:visibility="gone"
+        />
+
+    <TextView
+            android:id="@+id/i2c_text_readvalue_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="empty"
+            android:layout_toRightOf="@+id/i2c_text_readvalue_Tips"
+            android:layout_alignBottom="@+id/i2c_text_readvalue_Tips"
+            android:layout_marginLeft="20dp"
+            android:textColor="#EA5246"
+            android:visibility="gone"
+        />
+
+    <TextView
+            android:id="@+id/i2c_text_write"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please enter the address and value to write："
+            android:layout_below="@+id/i2c_button_write"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="120dp"
+            android:visibility="gone"
+        />
+
+    <TextView
+            android:id="@+id/i2c_text_write_address_Tips"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="address: "
+            android:layout_below="@id/i2c_text_write"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="400dp"
+            android:visibility="gone"
+        />
+
+
+    <TextView
+            android:id="@+id/i2c_text_write_value_Tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="value: "
+            android:layout_below="@+id/i2c_text_write_address_Tips"
+            android:layout_alignRight="@+id/i2c_text_write_address_Tips"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"
+        />
+
+    <EditText
+            android:id="@+id/i2c_edit_write_address"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:hint="eg: 0x01"
+            android:layout_toRightOf="@+id/i2c_text_write_address_Tips"
+            android:layout_alignTop="@+id/i2c_text_write_address_Tips"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+        />
+
+    <EditText
+            android:id="@+id/i2c_edit_write_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="eg: 0x57"
+            android:layout_toRightOf="@+id/i2c_text_write_value_Tips"
+            android:layout_alignTop="@+id/i2c_text_write_value_Tips"
+            android:visibility="gone"
+        />
+
+    <Button
+            android:id="@+id/i2c_button_write_confirm"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Confirm"
+            android:layout_toRightOf="@+id/i2c_edit_write_value"
+            android:layout_alignTop="@+id/i2c_edit_write_value"
+            android:layout_marginLeft="50dp"
+            android:visibility="gone"
+        />
+
+</RelativeLayout>

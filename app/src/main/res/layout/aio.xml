@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/aio_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aio0: "
+            android:layout_toLeftOf="@+id/aio_text_display"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+        />
+
+    <TextView
+            android:id="@+id/aio_text_display"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="0"
+            android:layout_centerInParent="true"
+            android:textColor="#EA5246"
+            android:visibility="gone"
+        />
+
+    <Button
+            android:id="@+id/aio_button_Refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refresh"
+            android:layout_toRightOf="@+id/aio_text_display"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:visibility="gone"
+        />
+
+    <TextView
+            android:id="@+id/aio_text_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please select a value type："
+            android:layout_centerHorizontal="true"
+        />
+
+    <Button
+            android:id="@+id/aio_button_Int"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aio_text_tips"
+            android:layout_marginLeft="200dp"
+            android:text="Int"
+        />
+
+    <Button
+            android:id="@+id/aio_button_Float"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/aio_text_tips"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="200dp"
+            android:text="Float"
+        />
+
+</RelativeLayout>

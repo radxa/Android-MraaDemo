@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="pwm_data">
+        <item name="Pwm0">PWM0</item>
+        <item name="Pwm1">PWM1</item>
+    </string-array>
+
+    <string-array name="spi_data">
+        <item name="SPI1">SPI1</item>
+        <item name="SPI2">SPI2</item>
+    </string-array>
+
+    <string-array name="uart_data">
+        <item name="Uart2">Uart2</item>
+        <item name="Uart4">Uart4</item>
+    </string-array>
+
+    <string-array name="uart_baudrate">
+        <item name="1500000">1500000</item>
+        <item name="115200">115200</item>
+        <item name="57600">57600</item>
+        <item name="38400">38400</item>
+        <item name="19200">19200</item>
+        <item name="9600">9600</item>
+        <item name="4800">4800</item>
+        <item name="2400">2400</item>
+        <item name="1200">1200</item>
+        <item name="300">300</item>
+    </string-array>
+
+    <string-array name="gpio_data">
+        <item name="pin12">Pin12</item>
+        <item name="pin15">Pin15</item>
+        <item name="pin16">Pin16</item>
+        <item name="pin18">Pin18</item>
+        <item name="pin22">Pin22</item>
+        <item name="pin23">Pin23</item>
+        <item name="pin24">Pin24</item>
+        <item name="pin32">Pin32</item>
+        <item name="pin35">Pin35</item>
+        <item name="pin36">Pin36</item>
+        <item name="pin37">Pin37</item>
+        <item name="pin38">Pin38</item>
+        <item name="pin40">Pin40</item>
+    </string-array>
+
+    <string-array name="spi_recv_display_module">
+        <item name="Ascii">Ascii</item>
+        <item name="Value">Value</item>
+    </string-array>
+
+    <string-array name="i2c_bus">
+        <item name="I2C2">I2C2</item>
+        <item name="I2C6">I2C6</item>
+        <item name="I2C7">I2C7</item>
+    </string-array>
+
+
+
+</resources>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/spi_text_Tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Please input and select SPI bus: "
+        />
+
+    <TextView
+            android:id="@+id/spi_text_choice_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No choice"
+            android:layout_toRightOf="@+id/spi_text_Tips"
+            android:layout_alignBottom="@+id/spi_text_Tips"
+            android:textColor="#EA5246"
+        />
+
+    <Spinner
+            android:id="@+id/spi_spinner"
+            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:entries="@array/spi_data"
+            android:layout_below="@+id/spi_text_Tips"
+            android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+            android:id="@+id/spi_text_choice_displaymode_Tips"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spi_spinner"
+            android:text="Please select a data display mode： "
+            android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+            android:id="@+id/spi_text_choice_displaymodule"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="No choice"
+            android:layout_toRightOf="@+id/spi_text_choice_displaymode_Tips"
+            android:layout_alignBottom="@+id/spi_text_choice_displaymode_Tips"
+            android:textColor="#EA5246"
+        />
+
+    <Spinner
+            android:id="@+id/spi_spinner2"
+            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:entries="@array/spi_recv_display_module"
+            android:layout_below="@+id/spi_text_choice_displaymode_Tips"
+            android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+            android:id="@+id/spi_text_input_Tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please enter the information sent to the slave: "
+            android:layout_below="@+id/spi_spinner2"
+            android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+            android:id="@+id/spi_write_Tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Write Content: "
+            android:layout_toLeftOf="@+id/spi_edit_data"
+            android:layout_alignBottom="@+id/spi_edit_data"
+            android:layout_marginBottom="5dp"
+        />
+
+    <EditText
+            android:id="@+id/spi_edit_data"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="eg: 0x41 0x61 or 0x41, 0x61"
+            android:layout_below="@+id/spi_text_input_Tips"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+        />
+
+    <Button
+            android:id="@+id/spi_button_write_confirm"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="Send"
+            android:layout_toRightOf="@+id/spi_edit_data"
+            android:layout_alignBottom="@+id/spi_edit_data"
+            android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+            android:id="@+id/spi_text_recv_Tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Received Content: "
+            android:layout_below="@+id/spi_write_Tips"
+            android:layout_alignLeft="@+id/spi_write_Tips"
+            android:layout_marginTop="50dp"
+        />
+
+    <TextView
+            android:id="@+id/spi_text_recvcontent_display"
+            android:layout_height="wrap_content"
+            android:layout_width="250dp"
+            android:text=""
+            android:layout_toRightOf="@+id/spi_text_recv_Tips"
+            android:layout_alignBottom="@+id/spi_text_recv_Tips"
+            android:textColor="#EA5246"
+            android:gravity="center"
+            android:singleLine="false"
+        />
+
+
+</RelativeLayout>

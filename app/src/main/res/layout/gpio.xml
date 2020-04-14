@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/gpio_text_pin_Tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please select a Gpio pin: "
+        />
+
+    <TextView
+            android:id="@+id/gpio_text_display_pin_choice"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text=""
+            android:layout_toRightOf="@+id/gpio_text_pin_Tips"
+            android:textColor="#EA5246"
+        />
+
+    <Spinner
+            android:id="@+id/gpio_spinner_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/gpio_data"
+            android:layout_below="@+id/gpio_text_pin_Tips"
+        />
+
+    <TextView
+            android:id="@+id/gpio_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/gpio_spinner_pin"
+            android:text="Please select IO mode for Gpio: "
+        />
+
+    <Button
+            android:id="@+id/gpio_button_i"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/gpio_text1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="20dp"
+            android:text="Input"
+        />
+
+    <Button
+            android:id="@+id/gpio_button_o"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gpio_text1"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="200dp"
+            android:layout_marginTop="20dp"
+            android:text="Output"
+        />
+
+    <TextView
+            android:id="@+id/gpio_text_o"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/gpio_button_o"
+            android:layout_marginTop="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="140dp"
+            android:text="Click what you want to output："
+            android:visibility="gone"
+        />
+
+    <Button
+            android:id="@+id/gpio_button_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="high"
+            android:layout_below="@+id/gpio_button_o"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="245dp"
+            android:layout_marginTop="100dp"
+            android:visibility="gone"
+        />
+
+    <Button
+            android:id="@+id/gpio_button_low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="low"
+            android:layout_below="@+id/gpio_button_o"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="145dp"
+            android:layout_marginTop="100dp"
+            android:visibility="gone"
+        />
+
+    <TextView
+            android:id="@+id/gpio_text_i"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/gpio_button_i"
+            android:layout_marginTop="70dp"
+            android:layout_alignParentLeft="true"
+            android:text="Pin reading:"
+            android:layout_marginLeft="206dp"
+            android:visibility="gone"
+        />
+
+    <TextView
+            android:id="@+id/gpio_text_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gpio_text_i"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="240dp"
+            android:text="1"
+            android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/gpio_button_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gpio_text_display"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="286dp"
+        android:layout_marginTop="-24dp"
+        android:text="Refresh"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>

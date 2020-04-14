@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Spinner
+            android:id="@+id/spinner2"
+            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_alignParentRight="true"
+        />
+
+
+
+
+
+    <TextView
+            android:id="@+id/pwm_text_Tip"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Please select a PWM pin: "
+        />
+
+    <TextView
+            android:id="@+id/pwm_text_display_pin_choice"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="No choice"
+            android:textColor="#EA5246"
+            android:layout_toRightOf="@+id/pwm_text_Tip"
+        />
+
+    <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pwm_text_Tip"
+            android:entries="@array/pwm_data"
+        />
+
+    <TextView
+            android:id="@+id/pwm_text_period_Tips"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Please input pulse period (unit: US): "
+            android:layout_below="@+id/spinner1"
+            android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+            android:id="@+id/pwm_edit_period"
+            android:layout_below="@+id/pwm_text_period_Tips"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:hint="eg: 1~2147483"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+        />
+
+    <TextView
+            android:id="@+id/pwm_text_seekbar_Tips"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/pwm_edit_period"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Please drag the Seekbar to set the duty cycle of PWM: "
+        />
+
+    <SeekBar
+            android:id="@+id/pwm_seekbar"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:layout_below="@+id/pwm_text_seekbar_Tips"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+        />
+
+    <TextView
+            android:id="@+id/pwm_text_progress_display"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text=""
+            android:layout_toRightOf="@+id/pwm_seekbar"
+            android:layout_alignBottom="@+id/pwm_seekbar"
+            android:textColor="#EA5246"
+        />
+
+
+</RelativeLayout>

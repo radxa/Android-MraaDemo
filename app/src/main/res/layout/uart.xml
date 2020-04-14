@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/uart_text_Tips"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Please select a serial port: "
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+        />
+
+    <TextView
+            android:id="@+id/uart_text_display_Tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="empty"
+            android:layout_toRightOf="@+id/uart_text_Tips"
+            android:textColor="#EA5246"
+            android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+            android:id="@+id/uart_text_display_baudrate_Tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=", empty."
+            android:textColor="#EA5246"
+            android:layout_toRightOf="@+id/uart_text_display_Tips"
+            android:layout_alignBottom="@+id/uart_text_display_Tips"
+        />
+
+    <Spinner
+            android:id="@+id/uart_spinner"
+            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_below="@+id/uart_text_Tips"
+            android:layout_alignParentLeft="true"
+            android:entries="@array/uart_data"
+            android:spinnerMode="dialog"
+        />
+
+    <Spinner
+            android:id="@+id/uart_spinner_baudrate"
+            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_below="@+id/uart_spinner"
+            android:layout_alignParentLeft="true"
+            android:entries="@array/uart_baudrate"
+            android:spinnerMode="dialog"
+        />
+
+    <TextView
+            android:id="@+id/uart_text_Send_Tips"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Send: "
+            android:layout_below="@+id/uart_text_ReadWrite_Tips"
+            android:textStyle="bold"
+            android:layout_alignRight="@+id/uart_spinner"
+            android:layout_marginTop="30dp"
+        />
+
+    <TextView
+            android:id="@+id/uart_text_ReadWrite_Tips"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="The function of serial port is shown here： "
+            android:layout_below="@+id/uart_spinner_baudrate"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+        />
+
+    <TextView
+            android:id="@+id/uart_text_write_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Writing content: "
+            android:layout_toLeftOf="@+id/uart_edit_inputdata_to_send"
+            android:layout_alignBottom="@+id/uart_edit_inputdata_to_send"
+            android:layout_marginBottom="10dp"
+        />
+
+    <EditText
+            android:id="@+id/uart_edit_inputdata_to_send"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="eg: Hello"
+            android:layout_below="@+id/uart_text_Send_Tips"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+        />
+
+    <Button
+            android:id="@+id/uart_button_for_send"
+            android:layout_height="40dp"
+            android:layout_width="60dp"
+            android:text="Send"
+            android:layout_toRightOf="@+id/uart_edit_inputdata_to_send"
+            android:layout_alignBottom="@+id/uart_edit_inputdata_to_send"
+            android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+            android:id="@+id/uart_text_recv_Tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recv: "
+            android:textStyle="bold"
+            android:layout_below="@+id/uart_edit_inputdata_to_send"
+            android:layout_alignRight="@+id/uart_spinner"
+            android:layout_marginTop="30dp"
+        />
+
+    <TextView
+            android:id="@+id/uart_text_read_content"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Reading content： "
+            android:layout_below="@+id/uart_button_for_recv"
+            android:layout_alignLeft="@+id/uart_text_write_content"
+            android:layout_marginTop="15dp"
+        />
+
+
+    <TextView
+            android:id="@+id/uart_text_recv_display"
+            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:text=""
+            android:layout_alignBottom="@+id/uart_text_read_content"
+            android:layout_toRightOf="@+id/uart_text_read_content"
+            android:gravity="center"
+            android:textColor="#EA5246"
+            android:singleLine="false"
+        />
+
+    <Button
+            android:id="@+id/uart_button_for_recv"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="Recv"
+            android:layout_toRightOf="@+id/uart_text_recv_Tips"
+            android:layout_alignTop="@+id/uart_text_recv_Tips"
+            android:layout_marginLeft="10dp"
+        />
+
+</RelativeLayout>
