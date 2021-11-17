@@ -4,6 +4,7 @@ package com.radxa.mraademo;
 
 import android.app.Activity;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
@@ -50,6 +51,9 @@ public class PwmAction {
         /* 实例化两个pwm引脚 */
         pwmList.add(new Pwm(RockPI4.ROCK_PI_4_PIN11.swigValue()));
         pwmList.add(new Pwm(RockPI4.ROCK_PI_4_PIN13.swigValue()));
+
+        /* to avoid non-numeric characters */
+        editPeriod.setInputType(InputType.TYPE_CLASS_NUMBER);
 
         /* 添加监听器, 为下拉列表添加事件响应 */
         setSpinnerListener();
